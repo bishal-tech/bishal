@@ -98,9 +98,19 @@ span {
 }
 
 .cta-btn-1 {
-    text-decoration: underline;
-    color: var(--main-yellow);
-    font-size: 22px;
+    background-color: var(--main-yellow);
+    padding: 10px 25px;
+    border-radius: 25px 0px 25px 0px;
+    font-size: 20px;
+    transition: all 0.4s linear;
+}
+
+.cta-btn-1:hover {
+    background-color: var(--text-white);
+    padding: 10px 25px;
+    border-radius: 0px 25px 0px 25px;
+    transition: all 0.4s linear;
+
 }
 
 .social-link {
@@ -202,6 +212,10 @@ span {
 
 }
 
+.brands svg{
+    width: 50px;
+}
+
 /* Portfolio section style start here  */
 
 .pt-slider {
@@ -238,24 +252,22 @@ span {
 
 /* review section style start here  */
 
-.review-slider {
-    display: flex;
+/* .review-slider { */
+    /* display: flex;
     justify-content: center;
     margin: inherit;
-    align-items: center;
+    align-items: center; */
     /* max-width: 800px; */
-}
+/* } */
 
 .review-slide {
     display: flex;
-    justify-content: space-between;
-    /* max-width: 860px; */
-    gap: 50px;
     align-items: center;
+    gap: 50px;
 }
 
 .review-img img {
-    width: 300px;
+    max-width: 500px;
     border-radius: 15px;
 }
 
