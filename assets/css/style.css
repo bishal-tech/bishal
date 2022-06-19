@@ -19,6 +19,7 @@
 body {
     background-color: var(--bg-1);
     color: var(--text-white);
+    scroll-behavior: smooth;
 }
 
 h1,
@@ -140,6 +141,15 @@ span {
     border-radius: 50%;
 }
 
+.active {
+    color: var(--main-yellow) !important;
+
+}
+
+.nav-link:hover {
+    color: var(--main-yellow) !important;
+}
+
 /* contact section style start here  */
 .hero {
     position: relative;
@@ -212,8 +222,23 @@ span {
 
 }
 
-.brands svg{
+.brands-slider {
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand-slide svg {
     width: 50px;
+    fill: var(--text-white);
+    transition: all 0.4s linear;
+}
+
+.brand-slide svg:hover {
+    /* width: 60px; */
+    transform: translateY(-10px);
+    fill: var(--main-yellow);
+    transition: all 0.4s linear;
+
 }
 
 /* Portfolio section style start here  */
@@ -225,17 +250,45 @@ span {
     justify-content: center;
 }
 
+.pt-slide {
+    position: relative;
+}
+
 .pt-slide img {
-    transition: all 0.3s linear;
+    display: block;
 }
 
-.pt-slide img:hover {
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-2);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.pt-slide:hover .overlay {
+    height: 50%;
     box-shadow: var(--box-shadow);
-    border-radius: 15px;
-    transform: translateY(-10px);
     transition: all 0.3s linear;
-
 }
+
+.ov-content {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
 
 /* blogs section style start here  */
 
@@ -253,11 +306,11 @@ span {
 /* review section style start here  */
 
 /* .review-slider { */
-    /* display: flex;
+/* display: flex;
     justify-content: center;
     margin: inherit;
     align-items: center; */
-    /* max-width: 800px; */
+/* max-width: 800px; */
 /* } */
 
 .review-slide {
