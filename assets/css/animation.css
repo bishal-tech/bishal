@@ -1,0 +1,64 @@
+/* Animation css is here  */
+.img.vert-move {
+    -webkit-animation: mover 1s infinite alternate;
+    animation: mover 1s infinite alternate;
+}
+
+img.vert-move {
+    -webkit-animation: mover 1s infinite alternate;
+    animation: mover 1s infinite alternate;
+}
+
+@-webkit-keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animated one by one */
+.anim {
+    opacity: 0;
+    transform: translateY(400px);
+    animation: moveup 1.0s linear forwards;
+}
+
+@keyframes moveup {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.hero h1,
+.title {
+    animation-delay: 0.2s;
+}
+
+.hero hr,
+.hero h2 {
+    animation-delay: 0.4s;
+}
+
+.hero ul,
+.hero p {
+    animation-delay: 0.6s;
+}
+
+.hero img,
+.hero a {
+    animation-delay: 1.5s;
+}
