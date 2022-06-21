@@ -1,4 +1,10 @@
+var preloader = document.getElementById("loader");
+function loader() {
+  preloader.style.display = "none";
+}
+
 $(document).ready(function () {
+  //here slider js
   $(".brands-slider").slick({
     infinite: true,
     autoplay: true,
